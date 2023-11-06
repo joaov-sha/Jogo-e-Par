@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo: É par?</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="nivel">
+            <label for="nivel">Nivel:</label>
+            <select name="nivel" id="nivel">
+                <option value="0" default>Selecione</option>
+                <option value="1">Fácil</option>
+                <option value="2">Médio</option>
+                <option value="3">Difícil</option>
+            </select>
+        </div>
+        <div class="timer">
+            <label for="tempo">Tempo:</label>
+            <input type="text" name="tempo" id="tempo" disabled>
+        </div>
+        <div class="menu box">
+            <ul>
+                <li>
+                    <button id="start">Start</button>
+                </li>
+                <li>
+                    <button id="pause">Pause</button>
+                </li>
+                <li>
+                    <button id="parar">Stop</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <p id="numero">
+
+        </p>
+    </main>
+    <footer>
+        <div class="acertos">
+            <label for="acertos">Acertos:</label>
+            <input type="text" name="acertos" id="acertos" disabled>
+            <span>(<span class="porcentagem" id="percent"></span>)</span>
+        </div>
+        <div class="erros">
+            <label for="erros">Erros:</label>
+            <input type="text" name="erros" id="erros" disabled>
+        </div>
+        <div class="sorteados">
+            <label for="sorteados">Números pares sorteados:</label>
+            <input type="text" name="sorteados" id="sorteados" disabled>
+        </div>
+    </footer>
+</body>
+
+</html>
