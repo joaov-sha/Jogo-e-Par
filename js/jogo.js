@@ -74,6 +74,13 @@ window.addEventListener("load", function () {
         audio.currentTime = 0;
     });
 
+    sair.addEventListener("click",function(){
+        setTimeout(function(){
+            alert("Você será redirecionado à página de login, obrigado por jogar.");
+            window.location.href="login.html";
+        },3000);
+    });
+
     function inicializar() {
         dificuldade = document.getElementById("dificuldade");
         nivel = dificuldade.value;
