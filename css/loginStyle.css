@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    background-color: black;
+    padding: 10px;
+}
+header ul{
+    list-style: none;
+    padding: 15px;
+    text-align: right;
+}
+header ul li{
+    display: inline-block;
+}
+header ul li a:link, header ul li a:active, header ul li a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 1s all;
+}
+header ul li a:hover{
+    background-color: white;
+    color: black;
+}
+main{
+    text-align: center;    
+}
+main form{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/pexels-sergio-souza-2039944.jpg');
+    background-size: 100%;
+}
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px;
+    border: none;
+    box-shadow: 10px 10px 10px 10px blue;
+}
+form fieldset legend{
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+}
+form input[type="email"],form input[type="password"]{
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 10px;
+}
+form input[type="button"]{
+    width: 50%;
+    margin-top: 10px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+form input[type="button"]:hover{
+    cursor: pointer;
+    background-color: #e6e6e6;
+}
+form input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+.error{
+    color: red;
+    font-size: 10px;
+}
+.invisibility{
+    display: none;
+}
+.errorAdjustment{
+    margin: 10px 0px;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+    text-align: center;
+}
+footer p{
+    color: white;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    main form {
+        background-image: url('../img/pexels-vidal-balielo-jr-2337779.jpg');
+        background-size: 100vh;
+    }
+    form fieldset {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none;
+    }
+    form input[type="email"], form input[type="password"] {
+        width: 100%;
+    }
+    form input[type="button"] {
+        width: 100%;
+    }
+}

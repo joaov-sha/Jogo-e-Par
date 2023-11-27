@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" type="text/css" href="css/cadastroStyle.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/jAlertWifi.css">
+    <script src="js/jAlertWifi.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="poster"></div>
+            <div class="formulario">
+                <form>
+                    <fieldset>
+                        <legend>
+                            <h1>Cadastre-se</h1>
+                        </legend>
+                        <input type="email" name="user" id="user" placeholder="Nome de Usuário" required class="errorAdjustment">
+                        <p id="erroUsuario" class="error invisibility">Nome de usuário inválido, informe novamente.</p>
+                        <input type="password" name="pwd" id="pwd" placeholder="Senha" required class="errorAdjustment">
+                        <p id="erroSenha" class="error invisibility">Senha inválida informada, informe novamente.</p>
+                        <input type="password" name="confirmPwd" id="confirmPwd" placeholder="Confirme sua senha" required class="errorAdjustment">
+                        <p id="erroConfirmacao" class="error invisibility">A senha informada não corresponde à anterior, informe novamente.</p>
+                        <input type="button" value="Cadastrar" id="cadastrar">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Todos os direitos reservados.
+        </p>
+    </footer>
+</body>
+
+</html>

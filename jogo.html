@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jogoStyle.css">
+    <script src="js/jogo.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="caixa">
+            <label for="dificuldade">Nível:</label>
+            <select name="dificuldade" id="dificuldade">
+                <option value="0" default>Selecione</option>
+                <option value="1">Fácil</option>
+                <option value="2">Médio</option>
+                <option value="3">Difícil</option>
+            </select>
+        </div>
+        <div class="caixa">
+            <p>
+                Tempo:
+                <audio src="sounds/circus-11794.mp3" id="audio" loop></audio>
+                <span id="tempo">
+                    
+                </span>
+            </p>
+        </div>
+        <div class="caixa">
+            <nav>
+                <ul>
+                    <li><button id="iniciar">Iniciar</button></li>
+                    <li><button id="pausar">Pausar</button></li>
+                    <li><button id="parar">Parar</button></li>
+                    <li><button id="sair">Sair</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <p>
+            <span id="numero"></span>
+        </p>
+    </main>
+    <footer>
+        <div class="caixa">
+            <p>Acertos:<span id="acertos"></span>(<span id="percentAcertos"></span>)</p>
+        </div>
+        <div class="caixa">
+            <p>Erros:<span id="erros"></span></p>
+        </div>
+        <div class="caixa">
+            <p>Números pares sorteados: <span id="pares"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*{
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Orbitron',sans-serif;
+}
+
+.caixa{
+    width: 100%;
+}
+
+header,footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+footer{
+    padding: 15px;
+    position: fixed;
+    bottom: 0px;
+    font-size: 24px;
+}
+header p{
+    margin-left: -20px;
+}
+
+header ul{
+    list-style: none;
+    padding: 10px;
+}
+
+header ul li{
+    display: inline-block;
+}
+header ul li button{
+    background-color: #8a2be2;
+    color: white;
+}
+header ul li button:hover{
+    cursor: pointer;
+    background-color: #9c6df6;
+    box-shadow: 1px 1px 1px;
+}
+
+header ul li button, header select, header option{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header label{
+    font-size: 28px;
+}
+
+header select, header option{
+    font-size: 24px;
+    background-color: wheat;
+}
+
+header p{
+    font-size: 28px;
+}
+
+span{
+    color: yellow;
+}
+
+header p span{
+    font-size: 36px;
+}
+main{
+    background-image: url('../img/pexels-adnorf-2788806.jpg');
+    background-size: 100%;
+}
+main p{
+    width: 100%;
+    text-align: center;
+}
+main p span{
+    color: wheat;
+    font-size: 37.33em;
+}
+footer:nth-child(3) .caixa{
+    margin-left: -100px;
+}
+footer p{
+    color: white;
+    font-size: 24px;
+}
+
+.certo{
+    color: green;
+}
+
+.errado{
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    header label {
+        font-size: 20px;
+    }
+    header ul li button, header select, header option {
+        padding: 8px;
+        font-size: 14px;
+    }
+    main{
+        background-image: url('../img/pexels-vidal-balielo-jr-2337779.jpg');
+        height: 78vh;
+        display: flex;
+    }
+    main p span {
+        margin-top: 300px;
+        color: white;
+        text-align: center;
+        font-size: 140px;
+    }
+    footer p {
+        font-size: 18px;
+    }
+}
