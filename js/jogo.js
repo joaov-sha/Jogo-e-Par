@@ -33,6 +33,7 @@ window.addEventListener("load", function () {
         }
     });
 
+    // Arquivo será alterado futuramente para correção de problemas de lógica e melhoramento do código
     iniciar.addEventListener("click", function () {
         if (nivel == 0) {
             alert("Para jogar, primeiro selecione um nível de dificuldade.");
