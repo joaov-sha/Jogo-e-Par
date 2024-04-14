@@ -9,8 +9,10 @@
 </head>
 <body>
     <header>
+        <!-- Caixa representando seletor de dificuldade -->
         <div class="caixa">
             <label for="dificuldade">Nível:</label>
+            <!-- Seletor de dificulade com os níveis de 0 a 3 -->
             <select name="dificuldade" id="dificuldade">
                 <option value="0" default>Selecione</option>
                 <option value="1">Fácil</option>
@@ -19,8 +21,10 @@
             </select>
         </div>
         <div class="caixa">
+            <!-- Caixa responsável pelo temporizador exibido na parte superior da tela -->
             <p>
                 Tempo:
+                <!-- Faixa de audio que toca enquanto o jogo está ativo -->
                 <audio src="sounds/circus-11794.mp3" id="audio" loop></audio>
                 <span id="tempo">
                     
@@ -29,6 +33,7 @@
         </div>
         <div class="caixa">
             <nav>
+                <!-- Menu com 4 botões -->
                 <ul>
                     <li><button id="iniciar">Iniciar</button></li>
                     <li><button id="pausar">Pausar</button></li>
@@ -39,11 +44,13 @@
         </div>
     </header>
     <main>
+        <!-- O parágrafo que exibe o número que compõe o jogo -->
         <p>
             <span id="numero"></span>
         </p>
     </main>
     <footer>
+        <!-- Exibição das estatísticas de acertos, erros e números gerados para o usuário -->
         <div class="caixa">
             <p>Acertos:<span id="acertos"></span>(<span id="percentAcertos"></span>)</p>
         </div>

@@ -11,15 +11,21 @@
 
 <body>
     <main>
+        <!-- Formulário de login -->
         <form>
             <fieldset>
                 <legend>
                     <h1>Login</h1>
                 </legend>
+                <!-- Campo de email -->
                 <input type="email" name="user" id="user" placeholder="Usuário">
+                <!-- Caso o usuário seja informado de maneira incorreta, apresenta o erro a seguir -->
                 <p id="erroUser" class="error invisibility">Nome de usuário informado inválido, favor informe um nome válido.</p>
+                <!-- Campo de senha -->
                 <input type="password" name="pwd" id="pwd" placeholder="Senha">
+                <!-- Caso a senha seja informada de maneira incorreta apresenta o erro a seguir -->
                 <p id="erroPwd" class="error invisibility"></p>
+                <!-- Botão de login -->
                 <input type="button" value="Entrar" id="login">
             </fieldset>
         </form>
