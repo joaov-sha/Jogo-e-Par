@@ -1,4 +1,4 @@
-#Jogo: É par  
+# Jogo: É par  
 
 Criado o primeiro projeto front-end referente a um jogo de par ou ímpar, utilizando:
 - HTML5
