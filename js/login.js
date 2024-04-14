@@ -1,18 +1,20 @@
 window.addEventListener("load", function () {
-    // Seleção dos campos usuário, senha e confirmação de senha
     user = document.getElementById("user");
+    erroUser = document.getElementById("erroUser");
     pwd = document.getElementById("pwd");
     confirmPwd = document.getElementById("confirmPwd");
-    // Seleção do botão de login
     entrar = document.getElementById("login");
-    // Contagem de tentativas de login realizadas
     quantidade = 0;
-    // Adição de escutador de eventos ao botão de login que verifica se existe o usuário salvo no localStorage do navegador e caso estejam corretamente preenchidos os campos redireciona o usuário à página do jogo após 1,5 segundo, ou, em caso de 3 tentativas falhas de login, o usuário é redirecionado à página de fale conosco, esta que não foi implementada.
     entrar.addEventListener("click", function () {
         var usuarios = JSON.parse(localStorage.getItem("login"));
-        console.log(usuarios);
-        if (user.value == "") {
-            document.getElementById("erroUser").innerHTML = "Nome de usuário inválido, favor insira um nome válido.";
+        if (user.value == "" && pwd.value == "") {
+            showGeneralError(user,pwd,erroUsuario,erroSenha);
+            fieldErrorHide(user,erroUsuario);
+            fieldErrorHide(pwd,erroSenha);
+        }else if(user.value == ""){
+            showEspecificError(user,erroUsuario);
+        }else if(pwd.value == ""){
+            showEspecificError(pwd,erroSenha);
         }else{
             for(i = 0; i < usuarios.length; i++){
                 if(user.value == usuarios[i].user && pwd.value == usuarios[i].password){
@@ -21,7 +23,6 @@ window.addEventListener("load", function () {
                     },1500);
                 }else{
                     quantidade++;
-                    console.log(quantidade);
                     if(quantidade >= 3){
                         setTimeout(function(){
                             window.location.href="../faleConosco.html";
@@ -32,3 +33,28 @@ window.addEventListener("load", function () {
         }
     });
 });
+
+function showGeneralError(field1, field2, fieldError1, fieldError2){
+    field1.classList.add("errorAdjustment");
+    field2.classList.add("errorAdjustment");
+    fieldError1.classList.remove("invisibility");
+    fieldError2.classList.remove("invisibility");
+    field1.focus();
+}
+
+function hideEspecificError(field, fieldError){
+    field.classList.remove("errorAdjustment");
+    fieldError.classList.add("invisibility");
+}
+
+function showEspecificError(field, fieldError){
+    field.classList.add("errorAdjustment");
+    fieldError.classList.remove("invisibility");
+    field.focus();
+}
+
+function fieldErrorHide(field,fieldError){
+    field.addEventListener("keypress",function(){
+        hideEspecificError(field,fieldError);
+    });
+}

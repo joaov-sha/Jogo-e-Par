@@ -17,22 +17,15 @@
             <div class="poster"></div>
             <div class="formulario">
                 <form>
-                    <!-- Formulário para a criação do cadastro de usuários -->
                     <fieldset>
                         <legend>
                             <h1>Cadastre-se</h1>
                         </legend>
-                        <!-- Campo de email para cadastro -->
                         <input type="email" name="user" id="user" placeholder="Nome de Usuário" required class="errorAdjustment">
-                        <!-- Alerta de erro caso o usuário informe o nome de usuário a ser utilizado de maneira incorreta -->
                         <p id="erroUsuario" class="error invisibility">Nome de usuário inválido, informe novamente.</p>
-                        <!-- Campo de senha para cadastro (obrigatório)-->
                         <input type="password" name="pwd" id="pwd" placeholder="Senha" required class="errorAdjustment">
-                        <!-- Alerta de erro caso o usuário informe a senha de maneira incorreta -->
                         <p id="erroSenha" class="error invisibility">Senha inválida informada, informe novamente.</p>
-                        <!-- Campo de confirmação de senha (obrigatório) -->
                         <input type="password" name="confirmPwd" id="confirmPwd" placeholder="Confirme sua senha" required class="errorAdjustment">
-                        <!-- Alerta de erro caso a confirmação de senha não coincida com a senha informada anteriormente -->
                         <p id="erroConfirmacao" class="error invisibility">A senha informada não corresponde à anterior, informe novamente.</p>
                         <input type="button" value="Cadastrar" id="cadastrar">
                     </fieldset>

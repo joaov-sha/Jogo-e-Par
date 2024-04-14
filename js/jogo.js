@@ -1,14 +1,18 @@
 // Arquivo responsável por dar funcionalidades ao jogo
+// Criação das variáveis do jogo
+// Criação do elemento de áudio utilizado para ter como trilha sonora no jogo
+// Escutador de eventos responsável por modificar os valores de tempo disponível e tempo de cronometragem.
+// Escutador de eventos responsável por iniciar o cronômetro e também as funções de marcação de erros e acertos e a trilha sonora.
+// Escutador de eventos responsável por pausar o cronômetro, podendo este ser retomado clicando em iniciar novamente.
+// Escutador de eventos responsável por realizar a interrupção do cronômetro, sua zeragem e também a zeragem dos contadores disponíveis para o usuário.
+// Escutador de eventos responsável por redirecionar o usuário à tela login caso ele clique sobre o botão sair
 window.addEventListener("load", function () {
-    // Criação das variáveis do jogo
     let nivel, tempo, intervalo, numero, acertos, percentAcertos, erros, pares, minutos, segundos, temporizador;
 
-    // Criação do elemento de áudio utilizado para ter como trilha sonora no jogo
     const audio = document.getElementById("audio");
     inicializar();
     marcar();
 
-    // Escutador de eventos responsável por modificar os valores de tempo disponível e tempo de cronometragem.
     dificuldade.addEventListener("change", function () {
         if (nivel !== 0) {
             nivel = dificuldade.value;
@@ -29,7 +33,6 @@ window.addEventListener("load", function () {
         }
     });
 
-    // Escutador de eventos responsável por iniciar o cronômetro e também as funções de marcação de erros e acertos e a trilha sonora.
     iniciar.addEventListener("click", function () {
         if (nivel == 0) {
             alert("Para jogar, primeiro selecione um nível de dificuldade.");
@@ -61,12 +64,10 @@ window.addEventListener("load", function () {
         }
     });
 
-    // Escutador de eventos responsável por pausar o cronômetro, podendo este ser retomado clicando em iniciar novamente.
     pausar.addEventListener("click", function () {
         clearInterval(temporizador);
     });
 
-    // Escutador de eventos responsável por realizar a interrupção do cronômetro, sua zeragem e também a zeragem dos contadores disponíveis para o usuário.
     parar.addEventListener("click", function () {
         clearInterval(temporizador);
         nivel = 0;
@@ -81,7 +82,6 @@ window.addEventListener("load", function () {
         audio.currentTime = 0;
     });
 
-    // Escutador de eventos responsável por redirecionar o usuário à tela login caso ele clique sobre o botão sair
     sair.addEventListener("click",function(){
         setTimeout(function(){
             alert("Você será redirecionado à página de login, obrigado por jogar.");
@@ -154,7 +154,7 @@ window.addEventListener("load", function () {
         numero.addEventListener("click", function () {
             if (nivel !== 0 && !numero.classList.contains("certo") && !numero.classList.contains("errado")) {
                 numeroGerado = parseInt(numero.innerHTML, 10);
-                contagem();
+                // contagem();
                 if (numeroGerado % 2 == 0) {
                     acertos.innerHTML++;
                     percentAcertos.innerHTML = ((acertos.innerHTML / (acertos.innerHTML + erros.innerHTML)) * 100).toFixed(2) + "%";
